@@ -51,7 +51,7 @@ const letterScrect = [
 {
     id: 4, 
     name: "Thư bí mật 4",
-    lockID: 1,
+    lockID: 2,
     passWord: "7251",
     link: "https://ibb.co/TWTD7tM"
   },
@@ -65,7 +65,7 @@ const letterScrect = [
 {
     id: 6, 
     name: "Thư bí mật 6",
-    lockID: 1,
+    lockID: 2,
     passWord: "1234",
     link: "https://ibb.co/89C1v8G"
   }
@@ -103,14 +103,17 @@ class Home extends React.Component {
     console.log("click na")
   }
 
-  changePass = (val) => {
+  changePass = (e) => {
+    const { value } = e.target;
+console.log("val", value)
     this.setState({
-      pw: val
+      pw: value
     })
   }
 
   onConfirm = () => {
     const {pw, letterID} = this.state
+    console.log("pa ne", pw)
     var letter = letterScrect.filter(x => x.id == letterID)[0]
 
     if(letter?.passWord == pw)
