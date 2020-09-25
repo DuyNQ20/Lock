@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Row, Col, Select } from 'antd';
+import { Button, Row, Col, Select, Input } from 'antd';
 import './App.css';
 
 import KeyBoard from './KeyBoard'
@@ -31,22 +31,43 @@ const letterScrect = [
     id: 1, 
     name: "Thư bí mật 1",
     lockID: 1,
-    passWord: "1234",
-    link: "https://ant.design/docs/react/getting-started"
+    passWord: "10020",
+    link: "https://ibb.co/7KZyKf5"
   },
   {
     id: 2, 
     name: "Thư bí mật 2",
     lockID: 2,
-    passWord: "123",
-    link: "https://ant.design/docs/react/getting-started"
+    passWord: "9452",
+    link: "https://ibb.co/FwH6FHD"
   },
   {
     id: 3, 
     name: "Thư bí mật 3",
     lockID: 1,
+    passWord: "4283",
+    link: "https://ibb.co/s6P0MYN"
+  },
+{
+    id: 4, 
+    name: "Thư bí mật 4",
+    lockID: 1,
+    passWord: "7251",
+    link: "https://ibb.co/TWTD7tM"
+  },
+{
+    id: 5, 
+    name: "Thư bí mật 5",
+    lockID: 1,
+    passWord: "computer",
+    link: "https://ibb.co/TWTD7tM"
+  },
+{
+    id: 6, 
+    name: "Thư bí mật 6",
+    lockID: 1,
     passWord: "1234",
-    link: "https://ant.design/docs/react/getting-started"
+    link: "https://ibb.co/89C1v8G"
   }
 ]
 
@@ -135,15 +156,19 @@ class Home extends React.Component {
           <Col span={6}>
           </Col>
           <Col span={18}>
+            <Row><Col>Mật khẩu:  </Col></Row>
             <Row>
+              
             <Col>
-              <NumPad.Number
+              {/* <NumPad.Number
                 onChange={(value) => this.changePass(value)}
                 label={'Mật khẩu: '}
                 placeholder={'Mật khẩu'}
                 value={pw}
                 decimal={0}
-              />
+              /> */}
+
+             <Input onChange={(value) => this.changePass(value)} placeholder="Mật khẩu" />
             </Col>
               <Col>
                 <Button type="primary" onClick={() => this.onConfirm()} style={{ marginLeft: 8 }}>
