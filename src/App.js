@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Row, Col, Select } from 'antd';
 import './App.css';
-import  { Redirect } from 'react-router-dom'
 
 import KeyBoard from './KeyBoard'
 // import { NumericInput } from 'numeric-keyboard'
